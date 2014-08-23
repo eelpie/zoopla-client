@@ -1,5 +1,6 @@
 package uk.co.eelpieconsulting.landregistry.zoopla;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
@@ -23,7 +24,7 @@ public class Listing {
 	private String details_url;
 	private String image_url;
 	private String floor_plan;	
-	private int price;	
+	private BigDecimal price;	
 	private String first_published_date;
 	private String last_published_date;
 	private Double latitude;
@@ -81,10 +82,10 @@ public class Listing {
 	public void setFloor_plan(String floorPlan) {
 		floor_plan = floorPlan;
 	}
-	public int getPrice() {
+	public BigDecimal getPrice() {
 		return price;
 	}
-	public void setPrice(int price) {
+	public void setPrice(BigDecimal price) {
 		this.price = price;
 	}
 	public String getFirst_published_date() {

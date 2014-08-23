@@ -1,15 +1,17 @@
 package uk.co.eelpieconsulting.landregistry.zoopla;
 
+import java.math.BigDecimal;
+
 public class PriceChange {
 
 	private String date;
-	private int price;
+	private BigDecimal price;
 	
 	public String getDate() {
 		return date;
 	}
 	
-	public int getPrice() {
+	public BigDecimal getPrice() {
 		return price;
 	}
 	
