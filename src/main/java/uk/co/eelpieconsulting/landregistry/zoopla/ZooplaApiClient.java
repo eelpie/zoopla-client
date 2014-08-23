@@ -54,9 +54,8 @@ public class ZooplaApiClient {
 		return listings;
 	}
 	
-	public Listing getListing() throws HttpNotFoundException, HttpBadRequestException, HttpForbiddenException, HttpFetchException, JsonParseException, JsonMappingException, IOException {
-		final String xml = httpFetcher.get(buildListingUrl(31996237));	// TODO what is this hardcode?
-		System.out.println(xml);
+	public Listing getListing(long listingId) throws HttpNotFoundException, HttpBadRequestException, HttpForbiddenException, HttpFetchException, JsonParseException, JsonMappingException, IOException {
+		final String xml = httpFetcher.get(buildListingUrl(listingId));
 		Response response = mapper.readValue(xml, Response.class);
 		if (!response.getListing().isEmpty()) {
 			return response.getListing().get(0);
@@ -64,8 +63,8 @@ public class ZooplaApiClient {
 		return null;
 	}
 	
-	private String buildListingUrl(int listing_id) {
-		return ZOOPLA_API_BASE_URL + "property_listings.xml?listing_id=" + Integer.toString(listing_id) + "&" +
+	private String buildListingUrl(long listingId) {
+		return ZOOPLA_API_BASE_URL + "property_listings.xml?listing_id=" + listingId + "&" +
 			"include_sold=1" + "&" +
 			"api_key=" + apiKey;
 	}
