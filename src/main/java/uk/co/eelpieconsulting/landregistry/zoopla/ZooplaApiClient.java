@@ -41,7 +41,6 @@ public class ZooplaApiClient {
 		
 		while (page_number <= MAX_PAGINATION_DEPTH) {
 			final String xml = httpFetcher.get(buildPropertyListingsUrl(area, page_number));
-			System.out.println(xml);
 			Response response = mapper.readValue(xml, Response.class);
 			listings.addAll(response.getListing());
 			
