@@ -6,6 +6,7 @@ import java.util.List;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.google.code.morphia.annotations.Entity;
 import com.google.code.morphia.annotations.Id;
+import com.google.code.morphia.annotations.Indexed;
 
 @Entity("zooplaListing")
 public class Listing {
@@ -18,7 +19,9 @@ public class Listing {
 	
 	private long listing_id;
 	
+	@Indexed
 	private String displayable_address;
+	
 	private String listing_status;
 	private String description;
 	private String details_url;
