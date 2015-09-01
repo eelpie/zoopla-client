@@ -3,10 +3,11 @@ package uk.co.eelpieconsulting.landregistry.zoopla;
 import java.math.BigDecimal;
 import java.util.List;
 
+import org.mongodb.morphia.annotations.Entity;
+import org.mongodb.morphia.annotations.Id;
+import org.mongodb.morphia.annotations.Indexed;
+
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
-import com.google.code.morphia.annotations.Entity;
-import com.google.code.morphia.annotations.Id;
-import com.google.code.morphia.annotations.Indexed;
 
 @Entity("zooplaListing")
 public class Listing {

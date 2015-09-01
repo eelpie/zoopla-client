@@ -1,7 +1,7 @@
 package uk.co.eelpieconsulting.landregistry.zoopla;
 
-import com.google.code.morphia.annotations.Entity;
-import com.google.code.morphia.annotations.Id;
+import org.mongodb.morphia.annotations.Entity;
+import org.mongodb.morphia.annotations.Id;
 
 @Entity("image")
 public class Image {

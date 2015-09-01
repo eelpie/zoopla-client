@@ -21,14 +21,6 @@
 		</plugins>
 	</build>
 		
-	<repositories>
-		<repository>
-			<id>morphia.googlecode.com</id>
-			<name>Morphia Repo at Google Code</name>
-			<url>http://morphia.googlecode.com/svn/mavenrepo</url>
-		</repository>		
-	</repositories>
-	
 	<properties>
 		<jackson.version>2.4.0</jackson.version>
 	</properties>
@@ -40,11 +32,11 @@
 			<version>1.1.9</version>
 		</dependency>
 		
-		<dependency>
-			<groupId>com.google.code.morphia</groupId>
-			<artifactId>morphia</artifactId>
-			<version>0.98</version>
-		</dependency>
+       		<dependency>
+                        <groupId>org.mongodb.morphia</groupId>
+                        <artifactId>morphia</artifactId>
+                        <version>0.111</version>
+                </dependency>
 		
 		<dependency>
 			<groupId>com.google.guava</groupId>
